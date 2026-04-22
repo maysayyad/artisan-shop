@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { db } from "../firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 
@@ -14,4 +15,22 @@ export const getProducts = async () => {
     id: doc.id,
     ...doc.data()
   }));
+=======
+import { db } from "../firebase";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+
+// Add product
+export const addProduct = async (product) => {
+  await addDoc(collection(db, "products"), product);
+};
+
+// Get all products
+export const getProducts = async () => {
+  const snapshot = await getDocs(collection(db, "products"));
+
+  return snapshot.docs.map(doc => ({
+    id: doc.id,
+    ...doc.data()
+  }));
+>>>>>>> 8d21824 (final fix for vercel and images)
 };
