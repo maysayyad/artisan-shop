@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Staff from "./pages/Staff";
 import User from "./pages/User";
-import Products from "./pages/Products"; // ✅ ADD THIS
+import Products from "./pages/products"; 
 
 export default function App() {
   return (
